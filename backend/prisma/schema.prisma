@@ -1,0 +1,68 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id         Int          @id @default(autoincrement())
+  name       String
+  email      String       @unique
+  password   String
+  createdAt  DateTime     @default(now()) @map("created_at")
+  reports    Report[]
+  savedRoutes SavedRoute[]
+
+  @@map("users")
+}
+
+model Report {
+  id           Int      @id @default(autoincrement())
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId       Int      @map("user_id")
+  incidentType String   @map("incident_type")
+  description  String
+  severity     String
+  latitude     Float
+  longitude    Float
+  photoUrl     String?  @map("photo_url")
+  status       String   @default("open")
+  createdAt    DateTime @default(now()) @map("created_at")
+  alerts       Alert[]
+
+  @@map("reports")
+}
+
+model SavedRoute {
+  id            Int      @id @default(autoincrement())
+  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId        Int      @map("user_id")
+  name          String
+  fromLocation  String   @map("from_location")
+  toLocation    String   @map("to_location")
+  safetyScore   Int      @map("safety_score")
+  alertsEnabled Boolean  @default(true) @map("alerts_enabled")
+  fromLatitude  Float?   @map("from_latitude")
+  fromLongitude Float?   @map("from_longitude")
+  toLatitude    Float?   @map("to_latitude")
+  toLongitude   Float?   @map("to_longitude")
+  createdAt     DateTime @default(now()) @map("created_at")
+
+  @@map("saved_routes")
+}
+
+model Alert {
+  id        Int      @id @default(autoincrement())
+  report    Report   @relation(fields: [reportId], references: [id], onDelete: Cascade)
+  reportId  Int      @map("report_id")
+  message   String
+  latitude  Float
+  longitude Float
+  radiusKm  Float    @default(2) @map("radius_km")
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@map("alerts")
+}
