@@ -1,0 +1,24 @@
+<svg width="720" height="240" viewBox="0 0 720 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="720" height="240" fill="#0f2027" />
+  <g transform="translate(40 20)">
+    <path d="M104 6C74 6 48 32 48 68c0 31 25 47 47 54 22-7 47-23 47-54 0-36-26-62-48-62Z" fill="#0f2027" stroke="#00b4d8" stroke-width="8" />
+    <path d="M104 22c-25 0-48 23-48 51 0 34 37 60 48 70 11-10 48-36 48-70 0-28-23-51-48-51Z" fill="#162d3a" />
+    <path d="M104 46c-10 0-18 8-18 18 0 10 18 32 18 32s18-22 18-32c0-10-8-18-18-18Z" fill="#00b4d8" />
+    <circle cx="104" cy="60" r="8" fill="#ffffff" />
+    <path d="M57 110c15-7 26-17 39-12 11 4 21 12 32 8" stroke="#00b4d8" stroke-width="6" stroke-linecap="round" fill="none" />
+    <circle cx="57" cy="110" r="5" fill="#00b4d8" />
+    <circle cx="135" cy="108" r="5" fill="#00b4d8" />
+  </g>
+  <g transform="translate(210 42)">
+    <text x="0" y="0" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="42" font-weight="500">SafeRoute</text>
+    <text x="320" y="0" fill="#00b4d8" font-family="Inter, system-ui, sans-serif" font-size="42" font-weight="500">SA</text>
+    <rect x="0" y="22" width="480" height="2" fill="#00b4d8" />
+    <text x="0" y="58" fill="#7ecfe0" font-family="Inter, system-ui, sans-serif" font-size="12" letter-spacing="0.25em" font-weight="500">MZANSI SAFETY NAVIGATION</text>
+    <g transform="translate(0 80)">
+      <rect x="0" y="0" width="110" height="26" rx="12" fill="#0f2027" stroke="#00b4d8" stroke-width="2" />
+      <text x="55" y="17" fill="#00b4d8" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="700" text-anchor="middle">EST. 2026</text>
+      <rect x="128" y="0" width="220" height="26" rx="14" fill="none" stroke="#00b4d8" stroke-width="2" />
+      <text x="238" y="17" fill="#00b4d8" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="700" text-anchor="middle">PROUDLY SOUTH AFRICAN</text>
+    </g>
+  </g>
+</svg>
